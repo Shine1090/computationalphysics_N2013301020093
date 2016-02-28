@@ -9,7 +9,7 @@
 
 我叫SunBoyang.  
 物院2013级的学生，学习成绩不怎么样。不过对计算机还算比较感兴趣，所以我相信不会学不会计算物理的。   
-![我](http://attach.bbs.miui.com/forum/201401/09/205412cddthurrtguge9ut.png)
+![我](http://attach.bbs.miui.com/forum/201401/09/205412cddthurrtguge9ut.png)  
 差不多就长这样。  
 嗯，就介绍这么多吧。
 
