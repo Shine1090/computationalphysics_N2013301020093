@@ -1,4 +1,3 @@
-#this is the vocabulary.
 voc={
 'A' : ('  8  ',' 8 8 ','88888','8   8','8   8'),
 'C' : (' 888 ','8   8','8    ','8    ',' 888 '),
@@ -38,14 +37,15 @@ voc={
 doc=raw_input('Please input your document here:')
 doc=doc.upper()
 len=len(doc)
-def type(voc,word):
+for line in range(0,len/10):    
+    word=doc[line*10:(line+1)*10]
     for a in range(0,5):
         for i in word:
             print voc[i] [a],
         print ''
-for line in range(0,len/10):    
-    word=doc[line*10:(line+1)*10]
-    type(voc,word)
     print ''
 word=doc[len/10*10:len+1]
-type(voc,word)
+for a in range(0,5):
+    for i in word:
+        print voc[i] [a],
+    print ''
