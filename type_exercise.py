@@ -34,6 +34,8 @@ voc={
 "'" : (' 8   ','     ','     ','     ','     '),
 '"' : (' 8 8 ','     ','     ','     ','     '),
 '?' : (' 88  ','8  8 ','  8  ','     ',' 88  '),
+'-' : ('     ','     ',' 888 ','     ','     '),
+';' : ('     ',' 88  ','     ',' 88  ','8    '),
 }
 doc=raw_input('Please input your document here:')
 doc=doc.upper()
@@ -43,9 +45,9 @@ def type(voc,word):
         for i in word:
             print voc[i] [a],
         print ''
-for line in range(0,len/10):    
-    word=doc[line*10:(line+1)*10]
+for line in range(0,len/18):    
+    word=doc[line*18:(line+1)*18]
     type(voc,word)
     print ''
-word=doc[len/10*10:len+1]
+word=doc[len/18*18:len+1]
 type(voc,word)
