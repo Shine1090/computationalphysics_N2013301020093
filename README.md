@@ -13,6 +13,14 @@
 > - *只支持26个英文字母（不区分大小写），以及逗号，句点，单双引号，冒号，分号，感叹号，问号*。  
 > - 文件已上传（type_exercise.py）。
 
+>###弹球动画程序！
+受到老司机[**刘WT同学**](https://github.com/whuCanon/computationalphysics_N2013301020085)的程序的启发！  
+我就想我也能弄他个动画片出来   
+于是做了一个bounce的程序   
+大家可以来提建议  
+呦！  
+文件已上传（bounce.py）
+
 ##关于我
 
 我叫SunBoyang.  
