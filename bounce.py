@@ -16,7 +16,7 @@ while True:
     for i in range(1,26-y):
         print ' '*68,'='
     print '='*70
-    time.sleep(.2)
+    time.sleep(.1)
     x+=xx
     y+=yy
     if(x==47):
@@ -27,4 +27,4 @@ while True:
         yy=-1
     elif(y==0):
         yy=1
-    os.system('cls')
+    i=os.system('cls')
