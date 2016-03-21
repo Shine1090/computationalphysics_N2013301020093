@@ -19,9 +19,9 @@
 >###计算  
 
 > - i从1循环到n，每次增加dt的时间
-> - 合加速度为 <img src="http://www.forkosh.com/mathtex.cgi? \frac{dv}{dt}=g-\frac{av}{m}">
-> - 每次的速度增加近似认为是匀加速 <img src="http://www.forkosh.com/mathtex.cgi? dv=(g-\frac{av}{m})dt">
-> - 每次的位移增加近似看成匀加速运动 <img src="http://www.forkosh.com/mathtex.cgi? dd=(v+\frac{dv}{2})dt">
+> - 合加速度为 ![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})
+> - 每次的速度增加近似认为是匀加速![](http://www.forkosh.com/mathtex.cgi?%20dv=\(g-\\frac\{av\}\{m\}\)dt)
+> - 每次的位移增加近似看成匀加速运动![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\}) <img src="http://www.forkosh.com/mathtex.cgi? dd=\(v+\\frac\{dv\}\{2\}\)dt">
 > - 把每一次的t、v、d分别储存在三个数组中
 
 >###输出结果
@@ -49,17 +49,17 @@
 > - 1
 > - 输入时间步长(建议不要大于 0.00833333333333 否则运算结果可能出现较大偏差)
 > - 1
-> - 0    -1.0    0
-> - 1.0    15.0    7.0
-> - 2.0    -65.0    -18.0
-> - 3.0    335.0    117.0
-> - 4.0    -1665.0    -548.0
-> - 5.0    8335.0    2787.0
-> - 6.0    -41665.0    -13878.0
-> - 7.0    208335.0    69457.0
-> - 8.0    -1041665.0    -347208.0
-> - 9.0    5208335.0    1736127.0
-> - 10.0    -26041665.0    -8680538.0
+> - 0                -1.0                 0
+> - 1.0               15.0               7.0
+> - 2.0              -65.0              -18.0
+> - 3.0               335.0              117.0
+> - 4.0             -1665.0             -548.0
+> - 5.0              8335.0             2787.0
+> - 6.0            -41665.0            -13878.0
+> - 7.0             208335.0            69457.0
+> - 8.0           -1041665.0           -347208.0
+> - 9.0            5208335.0           1736127.0
+> - 10.0          -26041665.0         -8680538.0
 
 显然这个计算结果是很荒谬的，原因是时间步长太长，那怎样才能避免这样的情况呢？
 
@@ -68,8 +68,8 @@
 **如果程序可以自动根据输入的各个数据来确定应该去多长的步长较为合适就好了**  
 所以考虑怎样的步长才合适，结论是：    
 一步运算后的结果相较于前一步的加速度变化量远小于加速度的大小  
-即：<img src="http://www.forkosh.com/mathtex.cgi? \Large \Delta\frac{dv}{dt}=frac{a\Deltav}{m}=\frac{a(g- \frac{av}{m})\Deltat}{m}\ll(g- \frac{av}{m})">  
-即： <img src="http://www.forkosh.com/mathtex.cgi? \Large \Deltat\ll\frac{m}{a}">  
+即：![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})<img src="http://www.forkosh.com/mathtex.cgi? \\Large \\Delta\\frac\{dv\}\{dt\}=frac\{a\\Deltav\}\{m\}=\\frac\{a\(g- \\frac\{av\}\{m\}\)\\Deltat\}\{m\}\\ll\(g-\\frac\{av\}\{m\}\)">  
+即： ![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})<img src="http://www.forkosh.com/mathtex.cgi? \\Large \\Deltat\\ll\\frac\{m\}\{a\}">  
 
 因此程序将自动提示建议时间步长取小于m/(20a),否则运算结果可能出现较大偏差。  
 （上面的例子里已经有这个提示的功能了）
