@@ -20,8 +20,8 @@
 
 > - i从1循环到n，每次增加dt的时间
 > - 合加速度为 ![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})
-> - 每次的速度增加近似认为是匀加速![](http://www.forkosh.com/mathtex.cgi?%20dv=\(g-\\frac\{av\}\{m\}\)dt)
-> - 每次的位移增加近似看成匀加速运动![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\}) <img src="http://www.forkosh.com/mathtex.cgi? dd=\(v+\\frac\{dv\}\{2\}\)dt">
+> - 每次的速度增加近似认为是匀加速  ![](http://www.forkosh.com/mathtex.cgi?%20dv=\(g-\\frac\{av\}\{m\}\)dt)
+> - 每次的位移增加近似看成匀加速运动 ![](http://www.forkosh.com/mathtex.cgi?%20dd=\(v+\\frac\{dv\}\{2\}\)dt)
 > - 把每一次的t、v、d分别储存在三个数组中
 
 >###输出结果
@@ -68,11 +68,14 @@
 **如果程序可以自动根据输入的各个数据来确定应该去多长的步长较为合适就好了**  
 所以考虑怎样的步长才合适，结论是：    
 一步运算后的结果相较于前一步的加速度变化量远小于加速度的大小  
-即：![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})<img src="http://www.forkosh.com/mathtex.cgi? \\Large \\Delta\\frac\{dv\}\{dt\}=frac\{a\\Deltav\}\{m\}=\\frac\{a\(g- \\frac\{av\}\{m\}\)\\Deltat\}\{m\}\\ll\(g-\\frac\{av\}\{m\}\)">  
-即： ![](http://www.forkosh.com/mathtex.cgi?%20\\frac\{dv\}\{dt\}=g-\\frac\{av\}\{m\})<img src="http://www.forkosh.com/mathtex.cgi? \\Large \\Deltat\\ll\\frac\{m\}\{a\}">  
+即：![](http://www.forkosh.com/mathtex.cgi?\\Large \\Delta\\frac\{dv\}\{dt\}=\\frac\{a\\Delta v\}\{m\}=\\frac\{a\(g- \\frac\{av\}\{m\}\)\\Delta t\}\{m\}\\ll\(g-\\frac\{av\}\{m\}\))
+即： ![](http://www.forkosh.com/mathtex.cgi?\\Large \\Delta t\\ll\\frac\{m\}\{a\}) 
+
 
 因此程序将自动提示建议时间步长取小于m/(20a),否则运算结果可能出现较大偏差。  
 （上面的例子里已经有这个提示的功能了）
+
+----
 
 ##最后
 
