@@ -1,5 +1,8 @@
 # 2013301020093的计算物理课程说明页
-Name          : Sun Boyang
+
+Name          : Sun Boyang   
+
+
 Student Number: 2013301020093
 
 ---
@@ -24,7 +27,7 @@ Student Number: 2013301020093
 
 本次作业做了实现物体在流体中受重力的情况下，给定初速度、重力加速度、流体的阻力系数、物体质量、时间长度、时间分段的步长等条件下，计算速度与位移随时间变化的曲线的程序。  
 
-具体介绍见[第四次作业文件夹中的readme文件]( computationalphysics_N2013301020093/第四次作业/)  
+具体介绍见[第四次作业文件夹中的readme文件](https://github.com/Shine1090/computationalphysics_N2013301020093/blob/master/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A/readme.md)  
 
 
 ##关于我
