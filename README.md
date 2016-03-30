@@ -1,7 +1,6 @@
-# 2013301020093的Github说明页
-
-这个说明页是计算物理的第一次作业，其目的是让我们简单熟悉*Github*的页面以及简单了解**Markdown**的语法  
-我百度了Markdown的语法说明，我还能给出这个说明的[链接](https://segmentfault.com/markdown)
+# 2013301020093的计算物理课程说明页
+Name          : Sun Boyang
+Student Number: 2013301020093
 
 ---
 
