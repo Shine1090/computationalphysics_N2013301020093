@@ -18,17 +18,17 @@ a=0
 
 def initialize():
     global t_total,dt,v,n,g,m,a
-    print '输入总时间（单位：s）(不要太大，否则可能看到的结果就是两条直线)：'
+    print '输入总时间(不要太大，否则可能看到的结果就是两条直线)：'
     t_total=float(raw_input())
-    print '输入初速度（单位：m/s）(向上为负)：'
+    print '输入初速度(向上为负)：'
     v=[float(raw_input()),]
-    print '输入重力加速度（单位：m/s^2）：'
+    print '输入重力加速度：'
     g=float(raw_input())
-    print '输入f=av中的阻力系数a（单位：N*s/m）:'
+    print '输入f=av中的阻力系数a:'
     a=float(raw_input())
-    print '输入物体质量（单位：kg）：'
+    print '输入物体质量：'
     m=float(raw_input())
-    print '输入时间步长（单位：s）(建议不要大于', m/a/20.0, '否则运算结果可能出现较大偏差)'
+    print '输入时间步长(建议不要大于', m/a/20.0, '否则运算结果可能出现较大偏差)'
     dt=float(raw_input())
     n=int(t_total/dt)
 
