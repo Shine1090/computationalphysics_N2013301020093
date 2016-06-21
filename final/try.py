@@ -138,7 +138,7 @@ while True:
                     if lives == 0:
                         dead=True
                 
-            a_t=(30+1360000//(3000+ttot))
+            a_t=(30+1360000//(15000+ttot))
             if ttot%a_t+dtime>a_t:
                 enemies.append([random.randint(20,404),-25,random.randint(-100,100)/100.0])    
             ttot=ttot+dtime
