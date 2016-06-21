@@ -80,7 +80,7 @@ while True:
             score_str=str(score)
             for num in score_str:
                 screen.blit(numbers[num],(stt,290))
-                stt+=30
+                stt+=40
             screen.blit(re, (43,500))
             pygame.display.update()
         else:
