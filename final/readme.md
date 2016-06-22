@@ -91,24 +91,27 @@
     for num in '1234567890':  
         numbers[num] = pygame.image.load('number'+num+'.png')
     ```
+    
 > - 显示时用循环的方法，每次使显示位置右移。
 > - 前面说的出了bug的代码没有删，注释起来了，如果老师有空能帮我看一下告诉我是什么原因将非常感谢。
 >###连续跳出两层循环
 > - 在游戏结束页面按“R”是需要退回最外层大循环，但是在此之间隔了两层循环，于是如何break出两层就是一个很麻烦的问题。
 > - 我之前尝试了用函数互相引用的方式，但是也不幸的出了奇怪的bug，所以放弃了。Python里面没有标记转到某行这样的语法，也没有跳出多层的命令，无奈之下去请教了大神刘文焘同学（2003301020085），他一句话就令人恍然大悟。解决方法很简单：  
     ```
-    while True:  
-        if lives == 5:  
-            break  
+    while True:
+        if lives == 5:
+            break
         if dead:  
-            for event in pygame.event.get():  
-                if event.type == QUIT:  
-                    exit()  
-                if event.type == KEYDOWN:  
-                    if event.key == K_r:  
-                        lives = 5  
-                        break  
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    exit()
+                if event.type == KEYDOWN:
+                    if event.key == K_r:
+                        lives = 5
+                        break
     ```
+  
+> -  
 >###敌机逐渐变强
 > - 敌机出现频率升高：
     - 经过一些计算和测试，决定使敌机出现的大致频率（由于算法的特殊性，敌机并不是完全周期出现的，可能忽多忽少，忽密忽疏，这两句代码前面已经贴了。所以只能说是大致的周期，或者是表征相邻两个敌机出现时间间隔的特征时间）为：
