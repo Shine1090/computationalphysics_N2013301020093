@@ -77,7 +77,7 @@
       ```
       a_t=(30+1360000//(15000+ttot))  
       if ttot%a_t+dtime>a_t:  
-      enemies.append([random.randint(20,404),25,random.randint(-100,100)/100.0])  
+          enemies.append([random.randint(20,404),25,random.randint(-100,100)/100.0])  
       ```
       
   > - 8.9	清屏，绘制屏幕上的背景，飞机，子弹，敌机，生命数标志。
@@ -88,7 +88,7 @@
 > - 首先，将0~9的数字放在一张图片上，使用subsurface功能可以截取一个surface对象的一部分。但是莫名其妙地出了bug。报错提示矩形区域超出surface的范围，但是明明没超出，况且把范围增大了很多反而不报错了。上网查了也没能找到问题的原因。
 > - 这个不过始终未能得到解决，无奈只好把图片裁剪成一个一个的数字：  
     ```
-    for num in '1234567890':
+    for num in '1234567890':  
         numbers[num] = pygame.image.load('number'+num+'.png')
     ```
 > - 显示时用循环的方法，每次使显示位置右移。
@@ -97,17 +97,17 @@
 > - 在游戏结束页面按“R”是需要退回最外层大循环，但是在此之间隔了两层循环，于是如何break出两层就是一个很麻烦的问题。
 > - 我之前尝试了用函数互相引用的方式，但是也不幸的出了奇怪的bug，所以放弃了。Python里面没有标记转到某行这样的语法，也没有跳出多层的命令，无奈之下去请教了大神刘文焘同学（2003301020085），他一句话就令人恍然大悟。解决方法很简单：  
     ```
-    while True:
-        if lives == 5:
-            break
-        if dead:
-            for event in pygame.event.get():
-                if event.type == QUIT:
-                    exit()
-                if event.type == KEYDOWN:
-                    if event.key == K_r:
-                        lives = 5
-                        break
+    while True:  
+        if lives == 5:  
+            break  
+        if dead:  
+            for event in pygame.event.get():  
+                if event.type == QUIT:  
+                    exit()  
+                if event.type == KEYDOWN:  
+                    if event.key == K_r:  
+                        lives = 5  
+                        break  
     ```
 >###敌机逐渐变强
 > - 敌机出现频率升高：
